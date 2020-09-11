@@ -1,0 +1,22 @@
+<div *ngIf="imageList; else loading" class="row m-5">
+    <div *ngFor="let image of imageList" class="col-sm-4 col-lg-4 col-md-4 col-xl-4">
+    <div class="card mb-2">
+        <img [src]="image.item['imageUrl']" class="card-img-top">
+        <div class="font-weight-bold text-center">
+            <i class="delete fas fa-trash-alt fa-2x" (click)="deleteImage(image.key)"></i>
+            {{image.item['caption']}}
+        </div>
+    </div>
+    </div>  
+
+    <div class="col-sm-4">
+        <div class="card w-25">
+            <a routerLink="/photos/image"> <img src="./assets/addImage.png" class="rounded w-75"> </a>
+            <span class="text-center font-weight-bold">Add Image</span>
+        </div>
+    </div>
+</div>
+
+<ng-template #loading>
+    <div class="d-flex justify-content-center"><div class="spinner-grow"></div></div>
+</ng-template>

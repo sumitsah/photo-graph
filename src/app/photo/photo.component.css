@@ -1,0 +1,12 @@
+.alert-dark {
+  height       : 100%;
+  margin-bottom: 0px;
+}
+
+hr {
+  margin-top: 50px;
+}
+
+p {
+  display: inline-block;
+}
