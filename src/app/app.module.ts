@@ -12,6 +12,7 @@ import { PhotoComponent } from './photo/photo.component';
 import { environment } from 'src/environments/environment';
 import { ImageComponent } from './photo/image/image.component';
 import { ImageListComponent } from './photo/image-list/image-list.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { ImageListComponent } from './photo/image-list/image-list.component';
     DashboardComponent,
     PhotoComponent,
     ImageComponent,
-    ImageListComponent
+    ImageListComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,

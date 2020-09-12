@@ -19,3 +19,9 @@ img{
     display:inline-block;
     cursor: pointer;
 }
+
+
+.icon-bar {
+    margin: -40px;
+}
+  
