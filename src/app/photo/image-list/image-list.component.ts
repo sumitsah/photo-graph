@@ -8,7 +8,7 @@ import { ImageService } from 'src/app/shared/image.service';
 })
 export class ImageListComponent implements OnInit {
   imageList: any[];
-  // rowIndexArray: any[];
+  selectedImage: number;
 
   constructor(private imageService: ImageService) { }
 
@@ -16,15 +16,24 @@ export class ImageListComponent implements OnInit {
     this.imageService.imageDetailList.snapshotChanges().subscribe(
       list => {
         this.imageList = list.map((item) => ({
-                image : item.payload.val(),
-                key: item.key
-              }));
+          image: item.payload.val(),
+          key: item.key
+        }));
         // this.rowIndexArray = Array.from(Array(Math.ceil(this.imageList.length/3)).keys());
       }
     )
   }
 
-  deleteImage(imageDetails: any){
+  deleteImage(imageDetails: any) {
     this.imageService.deleteImage(imageDetails);
+  }
+
+  update(item) {
+    this.imageService.updateCaption(item);
+    this.selectedImage = null;
+  }
+
+  showInput(index) {
+    this.selectedImage = index;
   }
 }

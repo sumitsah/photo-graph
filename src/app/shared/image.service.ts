@@ -22,5 +22,11 @@ export class ImageService {
       .then(result => console.log(result))
       .catch(err => console.log(err));
   }
+
+  updateCaption(item) {
+    this.imageDetailList.update(item.key, { caption: item.image['caption'] })
+      .then(() => console.log('Caption updated!'))
+      .catch(err => console.log(err));
+  }
 }
 

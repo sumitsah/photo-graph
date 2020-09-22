@@ -8,19 +8,14 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { PhotoComponent } from './photo/photo.component';
 import { environment } from 'src/environments/environment';
-import { ImageComponent } from './photo/image/image.component';
-import { ImageListComponent } from './photo/image-list/image-list.component';
 import { AboutComponent } from './about/about.component';
+import {SlideshowModule} from 'ng-simple-slideshow';
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
-    PhotoComponent,
-    ImageComponent,
-    ImageListComponent,
     AboutComponent
   ],
   imports: [
@@ -29,7 +24,7 @@ import { AboutComponent } from './about/about.component';
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule,
     AngularFireDatabaseModule,
-    ReactiveFormsModule
+    SlideshowModule
   ],
   providers: [],
   bootstrap: [AppComponent]

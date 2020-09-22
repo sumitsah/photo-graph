@@ -1,30 +1,41 @@
 <div *ngIf="imageList; else loading" class="row m-5">
-    <div *ngFor="let item of imageList" class="col-sm-4 col-lg-4 col-md-4 col-xl-4">
-    <div class="card mb-2">
-        <img [src]="item.image['imageUrl']" class="card-img-top">
-        <div class="font-weight-bold text-center">
-            <i class="delete fas fa-trash-alt fa-2x" (click)="deleteImage(item.key)"></i>
-            {{item.image['caption']}}
-        </div>
+    <div *ngFor="let item of imageList; let i=index">
+        <img [src]="item.image['imageUrl']">
+    <!-- class="col-sm-4 col-lg-4 col-md-4 col-xl-4"> -->
+        <!-- <div class="card mb-3">
+            <img [src]="item.image['imageUrl']" class="card-img-top">
+            <div class="card-footer font-weight-bold text-center">
+                <i class="show fas fa-trash-alt float-right" (click)="deleteImage(item.key)"></i>
+                <ng-template #caption>
+                    {{item.image['caption']}}
+                </ng-template>
+                <ng-container *ngIf="selectedImage === i; else caption">
+                    <input type="text" [(ngModel)]="item.image['caption']">
+                    <i class="show fas fa-check-circle" (click)="update(item)"></i>
+                </ng-container>
+                <i class="show fas fa-pen float-right" (click)="showInput(i)"></i>
+            </div>
+        </div> -->
     </div>
-    </div>  
 
     <div class="col-sm-4">
         <div class="card w-25">
-            <a routerLink="/photos/image"> <img src="./assets/addImage.png" class="rounded w-75"> </a>
+            <a routerLink="/images/image-upload"> <img src="./assets/addImage.png" class="rounded w-75"> </a>
             <span class="text-center font-weight-bold">Add Image</span>
         </div>
     </div>
 </div>
 
 <ng-template #loading>
-    <div class="d-flex justify-content-center"><div class="spinner-grow"></div></div>
+    <div class="d-flex justify-content-center">
+        <div class="spinner-grow"></div>
+    </div>
 </ng-template>
 
 <div class="icon-bar">
-    <a href="#" class="facebook"><i class="fa fa-facebook"></i></a> 
-    <a href="#" class="twitter"><i class="fa fa-twitter"></i></a> 
-    <a href="#" class="google"><i class="fa fa-google"></i></a> 
+    <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+    <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+    <a href="#" class="google"><i class="fa fa-google"></i></a>
     <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
-    <a href="#" class="youtube"><i class="fa fa-youtube"></i></a> 
+    <a href="#" class="youtube"><i class="fa fa-youtube"></i></a>
 </div>

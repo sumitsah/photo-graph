@@ -10,3 +10,7 @@ hr {
 p {
   display: inline-block;
 }
+
+.container {
+  max-width: 90%;
+}
