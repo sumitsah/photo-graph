@@ -1,21 +1,21 @@
-<div *ngIf="imageList; else loading" class="row m-5">
-    <div *ngFor="let item of imageList; let i=index">
-        <img [src]="item.image['imageUrl']">
-    <!-- class="col-sm-4 col-lg-4 col-md-4 col-xl-4"> -->
-        <!-- <div class="card mb-3">
-            <img [src]="item.image['imageUrl']" class="card-img-top">
-            <div class="card-footer font-weight-bold text-center">
-                <i class="show fas fa-trash-alt float-right" (click)="deleteImage(item.key)"></i>
-                <ng-template #caption>
-                    {{item.image['caption']}}
-                </ng-template>
-                <ng-container *ngIf="selectedImage === i; else caption">
-                    <input type="text" [(ngModel)]="item.image['caption']">
-                    <i class="show fas fa-check-circle" (click)="update(item)"></i>
-                </ng-container>
-                <i class="show fas fa-pen float-right" (click)="showInput(i)"></i>
+<div *ngIf="imageList; else loading">
+    <div class="row">
+        <div *ngFor="let item of imageList; let i=index" class="col-sm-4 col-lg-4 col-md-4 col-xl-4">
+            <div class="card mb-5">
+                <img [src]="item.image['imageUrl']" class="card-img-top">
+                <div class="card-footer font-weight-bold text-center">
+                    <i class="show fas fa-trash-alt float-right" (click)="deleteImage(item.key)"></i>
+                    <ng-template #caption>
+                        {{item.image['caption']}}
+                    </ng-template>
+                    <ng-container *ngIf="selectedImage === i; else caption">
+                        <input type="text" [(ngModel)]="item.image['caption']">
+                        <i class="show fas fa-check-circle" (click)="update(item)"></i>
+                    </ng-container>
+                    <i class="show fas fa-pen float-right" (click)="showInput(i)"></i>
+                </div>
             </div>
-        </div> -->
+        </div>
     </div>
 
     <div class="col-sm-4">

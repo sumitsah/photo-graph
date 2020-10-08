@@ -1,19 +1,20 @@
-/* img{
+img{
     max-width: 100%;
-    max-height: 90%;
+    height: 90%;
     object-fit: cover; 
-} */
-/* .card-footer{
+}
+.card-footer{
     width: 100%;
     height: 10%;
     object-fit: cover;
-} */
+}
 img {
     border-radius: 10px 10px 0px 0px;
 }
 
 .card {
     border-radius: 10px;
+    height: 100%;
 }
 
 .show {
@@ -29,5 +30,32 @@ img:hover+div>.show,
 }
 
 .icon-bar {
-    margin: -40px;
+    margin: -60px;
 }
+
+/* .show-image-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+} */
+
+/* .outer {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+} */
+
+/* Create four equal columns that sits next to each other */
+.inner {
+    display: flex;
+    flex-direction: row;
+    flex: auto;
+    max-width: 33%;
+  }
+  
+  /* .inner img {
+    margin-top: 8px;
+    padding: 4px;
+    vertical-align: middle;
+    width: 100%;
+  }
+   */
