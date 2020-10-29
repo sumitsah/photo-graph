@@ -1,0 +1,42 @@
+<div class="alert alert-dark">
+  <header class="container-md container-xl container-sm container-lg fixed-top">
+    <div class="head-content">
+      <p class="h3 display-5">Image Gallery</p>
+      <ul>
+        <li><a routerLink="/dashboard">Home</a></li>
+        <li><a routerLink="/images/image-list">Gallery</a></li>
+        <li><a routerLink="/about">About</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a routerLink="/admin">Admin</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <div class="container">
+    <hr class="border-bottom">
+    
+  <div class="container outer shadow-lg p-3 mb-5 bg-white rounded">
+    <div class="text-center">
+      <h3>{{ title | uppercase }}</h3>
+    </div>
+    <hr>
+    <form [formGroup]="authForm" class="needs-validation" novalidate>
+      <div class="form-group col-sm-12">
+        <label for="form-email col-sm-12">Email:</label>
+        <input id="form-email" class="form-control" formControlName="email" placeholder="Email" type="text">
+      </div>
+      <div class="form-group col-sm-12">
+        <label for="form-password">Password:</label>
+        <input id="form-password" class="form-control" formControlName="password" placeholder="Password" type="password">
+      </div>
+      <div class="form-group col-sm-12">
+        <button class="btn btn-primary" (click)="onSubmit()" type="submit"
+          [disabled]="!authForm.valid">{{ title | uppercase }}</button>
+      </div>
+    </form>
+  </div>
+  </div>
+</div>
+
+
+

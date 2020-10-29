@@ -1,0 +1,88 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+  margin : 0;
+  padding: 0;
+}
+
+body {
+  height     : 100%;
+  margin     : 0;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+/* 
+    Common Menu Design
+*/
+.head-content {
+  width      : 80%;
+  margin     : auto;
+  padding-top: 30px;
+  font-size  : 1.2rem;
+}
+
+header ul {
+  display   : flex;
+  float     : right;
+  list-style: none;
+  gap       : 30px;
+}
+
+header a {
+  color          : #b1bdba;
+  text-decoration: none;
+}
+
+header a:hover {
+  color: #000000;
+}
+
+/* 
+    Social Media  
+*/
+
+.icon-bar {
+  position         : fixed;
+  top              : 60%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform    : translateY(-50%);
+  transform        : translateY(-50%);
+
+}
+
+.icon-bar a {
+  display   : block;
+  text-align: center;
+  padding   : 10px;
+  transition: all 0.3s ease;
+  color     : white;
+  font-size : 20px;
+}
+
+.icon-bar a:hover {
+  background-color: #000;
+}
+
+.facebook {
+  background: #3B5998;
+  color     : white;
+}
+
+.twitter {
+  background: #55ACEE;
+  color     : white;
+}
+
+.google {
+  background: #dd4b39;
+  color     : white;
+}
+
+.linkedin {
+  background: #007bb5;
+  color     : white;
+}
+
+.youtube {
+  background: #bb0000;
+  color     : white;
+}
