@@ -27,7 +27,8 @@
               "src/styles.css",
               "src/bootstrap-dist/css/bootstrap.min.css"
             ],
-            "scripts": []
+            "scripts": [],
+            "rebaseRootRelativeCssUrls": true
           },
           "configurations": {
             "production": {
